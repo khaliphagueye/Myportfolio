@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalipha Gueye - Développeur Web & Technicien Informatique</title>
+    <meta name="description"
+        content="Portfolio professionnel de Khalipha Gueye, Développeur Web, Backend Engineer & Technicien Informatique basé à Casablanca, Maroc.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a0a',
+                        ideBg: '#0f0f12',
+                        ideCard: '#141419',
+                        terminalGreen: '#00ff66',
+                        terminalCyan: '#00f0ff',
+                        accentBlue: '#00f0ff',
+                        accentOrange: '#ff9900',
+                        accentPurple: '#b066ff',
+                        accentGreen: '#00ff66',
+                        cardBg: '#121212',
+                        borderCol: '#222222'
+                    },
+                    fontFamily: {
+                        code: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-darkBg text-gray-300 font-sans antialiased selection:bg-terminalGreen selection:text-black">
+
+    <header class="fixed top-0 left-0 w-full bg-darkBg/90 backdrop-blur-md border-b border-borderCol z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#"
+                class="font-code text-terminalGreen font-bold text-lg hover:opacity-80 transition-opacity">&lt;Khalipha.dev/&gt;</a>
+
+            <nav class="hidden md:flex space-x-6 font-code text-sm">
+                <a href="#about" class="hover:text-terminalGreen transition-colors">01. // à_propos</a>
+                <a href="#skills" class="hover:text-terminalGreen transition-colors">02. // compétences</a>
+                <a href="#projects" class="hover:text-terminalGreen transition-colors">03. // projets</a>
+                <a href="#experience" class="hover:text-terminalGreen transition-colors">04. // expériences</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="https://github.com/khaliphagueye" target="_blank" aria-label="GitHub"
+                    class="text-gray-400 hover:text-terminalGreen transition-colors text-xl"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/khalipha-gueye-b82976197/" target="_blank" aria-label="LinkedIn"
+                    class="text-gray-400 hover:text-terminalGreen transition-colors text-xl"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-terminalGreen focus:outline-none text-2xl"
+                aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-cardBg border-b border-borderCol px-6 py-4 font-code text-sm space-y-3">
+            <a href="#about" class="block hover:text-terminalGreen transition-colors">01. // à_propos</a>
+            <a href="#skills" class="block hover:text-terminalGreen transition-colors">02. // compétences</a>
+            <a href="#projects" class="block hover:text-terminalGreen transition-colors">03. // projets</a>
+            <a href="#experience" class="block hover:text-terminalGreen transition-colors">04. // expériences</a>
+            <div class="flex space-x-4 pt-2 border-t border-borderCol">
+                <a href="https://github.com/khaliphagueye" target="_blank" aria-label="GitHub"
+                    class="text-gray-400 hover:text-terminalGreen text-xl"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/khalipha-gueye-b82976197/" target="_blank" aria-label="LinkedIn"
+                    class="text-gray-400 hover:text-terminalGreen text-xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="min-h-screen flex items-center justify-center pt-24 pb-12 px-6">
+        <div class="max-w-4xl w-full">
+            <div class="bg-cardBg border border-borderCol rounded-lg shadow-2xl overflow-hidden">
+                <div class="bg-[#1a1a1a] px-4 py-3 border-b border-borderCol flex items-center justify-between">
+                    <div class="flex space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="font-code text-xs text-gray-400">khalipha@portfolio:~</div>
+                    <div class="w-12"></div>
+                </div>
+                <div class="p-6 md:p-8 font-code">
+                    <p class="text-terminalCyan text-sm md:text-base mb-2">$ whoami</p>
+                    <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">Khalipha Gueye</h1>
+                    <p class="text-xl md:text-2xl text-terminalGreen mb-6">&gt; <span id="typed-text"></span><span
+                            class="animate-pulse">_</span></p>
+                    <p class="text-gray-400 font-sans text-base md:text-lg mb-8 max-w-2xl leading-relaxed">
+                        Développeur Web & Technicien Informatique basé à Casablanca, spécialisé dans la conception
+                        d'applications robustes, back-end et administration systèmes.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects"
+                            class="bg-terminalGreen text-black font-bold px-6 py-3 rounded font-code text-sm hover:bg-emerald-400 transition-all shadow-lg shadow-terminalGreen/10">
+                            execute(voir_projets);
+                        </a>
+                        <a href="https://github.com/khaliphagueye" target="_blank"
+                            class="border border-terminalCyan text-terminalCyan px-6 py-3 rounded font-code text-sm hover:bg-terminalCyan/10 transition-all">
+                            <i class="fab fa-github mr-2"></i>github_profile()
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="font-code text-2xl md:text-3xl font-bold text-white mb-8 flex items-center">
+            <span class="text-terminalGreen mr-3 text-xl">01.</span> À propos de moi
+            <span class="ml-4 h-[1px] bg-borderCol flex-grow"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="md:col-span-2 space-y-4 text-gray-300 font-sans leading-relaxed">
+                <p>
+                    Titulaire d'un <strong class="text-white">Master en Manager de Projets Informatiques</strong>
+                    (WES'SUP) et d'une <strong class="text-white">Licence en Informatique Option Génie Logiciel</strong>
+                    (Université Iba Der Thiam de Thiès), je combine une solide expertise en développement web et en
+                    administration systèmes & réseaux.
+                </p>
+                <p>
+                    Mon parcours m'a permis d'intervenir sur des projets variés (CRM internes, e-commerce, applications
+                    de location/réservation) en utilisant des technologies modernes comme Laravel, Spring Boot, PHP et
+                    JavaScript.
+                </p>
+            </div>
+            <div class="border border-borderCol bg-cardBg p-6 rounded-lg font-code text-sm space-y-3 shadow-md">
+                <div class="text-terminalGreen">// Localisation</div>
+                <div class="text-white">Casablanca, Maroc</div>
+                <div class="text-terminalGreen">// Email</div>
+                <div class="text-white text-xs break-all">lifa96.kg@gmail.com</div>
+                <div class="text-terminalGreen">// Téléphone</div>
+                <div class="text-white">+212 764 824 447</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="font-code text-2xl md:text-3xl font-bold text-white mb-12 flex items-center">
+            <span class="text-terminalGreen mr-3 text-xl">02.</span> Compétences Techniques
+            <span class="ml-4 h-[1px] bg-borderCol flex-grow"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+                class="bg-cardBg border border-borderCol p-6 rounded-lg hover:border-terminalGreen/40 transition-colors">
+                <h3 class="font-code text-terminalGreen text-lg mb-4">&gt; Langages</h3>
+                <ul class="space-y-2 font-code text-sm text-gray-300">
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>Java</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>PHP</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>JavaScript</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>HTML / CSS</li>
+                </ul>
+            </div>
+            <div
+                class="bg-cardBg border border-borderCol p-6 rounded-lg hover:border-terminalGreen/40 transition-colors">
+                <h3 class="font-code text-terminalGreen text-lg mb-4">&gt; Frameworks</h3>
+                <ul class="space-y-2 font-code text-sm text-gray-300">
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>Laravel</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>Spring Boot / MVC</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>Hibernate / JPA</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>Bootstrap</li>
+                </ul>
+            </div>
+            <div
+                class="bg-cardBg border border-borderCol p-6 rounded-lg hover:border-terminalGreen/40 transition-colors">
+                <h3 class="font-code text-terminalGreen text-lg mb-4">&gt; Databases</h3>
+                <ul class="space-y-2 font-code text-sm text-gray-300">
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>MySQL</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>Oracle</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>MongoDB</li>
+                </ul>
+            </div>
+            <div
+                class="bg-cardBg border border-borderCol p-6 rounded-lg hover:border-terminalGreen/40 transition-colors">
+                <h3 class="font-code text-terminalGreen text-lg mb-4">&gt; DevOps & Outils</h3>
+                <ul class="space-y-2 font-code text-sm text-gray-300">
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>Git / GitHub</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>Docker</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>Jenkins</li>
+                    <li><i class="fa-solid fa-chevron-right text-xs text-terminalCyan mr-2"></i>Jira / Trello / Scrum
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="font-code text-2xl md:text-3xl font-bold text-white mb-12 flex items-center">
+            <span class="text-terminalGreen mr-3 text-xl">03.</span> Projets & Réalisations GitHub
+            <span class="ml-4 h-[1px] bg-borderCol flex-grow"></span>
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div
+                class="bg-ideCard p-6 md:p-8 rounded-xl border border-gray-800 hover:border-terminalGreen/40 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">Teranga Travel Tours</h3>
+                        <span
+                            class="font-mono text-xs bg-orange-950 text-accentOrange px-2.5 py-1 rounded border border-orange-800/50">Web
+                            / Tourisme</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Plateforme web interactive dédiée au secteur
+                        du voyage et du tourisme, mettant en valeur des circuits, des réservations et des informations
+                        de voyage optimisées.</p>
+                </div>
+                <a href="https://github.com/khaliphagueye/teranga-travel" target="_blank"
+                    class="text-accentOrange font-mono text-sm hover:underline inline-flex items-center">Voir sur GitHub
+                    <i class="fab fa-github ml-2 text-xs"></i></a>
+            </div>
+
+            <div
+                class="bg-ideCard p-6 md:p-8 rounded-xl border border-gray-800 hover:border-terminalGreen/40 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">CRM Vision BF</h3>
+                        <span
+                            class="font-mono text-xs bg-sky-950 text-accentBlue px-2.5 py-1 rounded border border-sky-800/50">Full-Stack
+                            / CRM</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">CRM interne développé sur-mesure pour
+                        structurer et automatiser la gestion de la relation client, le suivi des dossiers et l'analyse
+                        de performance des équipes.</p>
+                </div>
+                <a href="https://github.com/khaliphagueye/visionbf-crm" target="_blank"
+                    class="text-accentBlue font-mono text-sm hover:underline inline-flex items-center">Voir sur GitHub
+                    <i class="fab fa-github ml-2 text-xs"></i></a>
+            </div>
+
+            <div
+                class="bg-ideCard p-6 md:p-8 rounded-xl border border-gray-800 hover:border-terminalGreen/40 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">K&N Shop</h3>
+                        <span
+                            class="font-mono text-xs bg-purple-950 text-accentPurple px-2.5 py-1 rounded border border-purple-800/50">E-commerce
+                            / Web</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Application e-commerce interactive permettant
+                        la gestion de catalogue produits, le panier d'achats et le processus de commande en ligne.</p>
+                </div>
+                <a href="https://github.com/khaliphagueye/K-N_SHOP" target="_blank"
+                    class="text-accentPurple font-mono text-sm hover:underline inline-flex items-center">Voir sur GitHub
+                    <i class="fab fa-github ml-2 text-xs"></i></a>
+            </div>
+
+            <div
+                class="bg-ideCard p-6 md:p-8 rounded-xl border border-gray-800 hover:border-terminalGreen/40 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">Goodlocsoa</h3>
+                        <span
+                            class="font-mono text-xs bg-green-950 text-accentGreen px-2.5 py-1 rounded border border-green-800/50">Laravel
+                            / Stripe</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Plateforme web de location de véhicules dotée
+                        de fonctionnalités avancées de réservation, d'authentification multi-rôles et de paiement
+                        sécurisé.</p>
+                </div>
+                <a href="https://github.com/khaliphagueye/khaliphagueye" target="_blank"
+                    class="text-accentGreen font-mono text-sm hover:underline inline-flex items-center">Voir sur GitHub
+                    <i class="fab fa-github ml-2 text-xs"></i></a>
+            </div>
+
+            <div
+                class="bg-ideCard p-6 md:p-8 rounded-xl border border-gray-800 hover:border-terminalGreen/40 transition-all flex flex-col justify-between md:col-span-2">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">Leads Infiny</h3>
+                        <span
+                            class="font-mono text-xs bg-gray-800 text-gray-300 px-2.5 py-1 rounded border border-gray-700">PHP
+                            / MySQL</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Application web avec back-end personnalisé
+                        pour la capture, le stockage et le traitement automatisé des formulaires de contact commerciaux.
+                    </p>
+                </div>
+                <a href="https://github.com/khaliphagueye/kongmarketing" target="_blank"
+                    class="text-gray-300 font-mono text-sm hover:underline inline-flex items-center">Voir sur GitHub <i
+                        class="fab fa-github ml-2 text-xs"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="font-code text-2xl md:text-3xl font-bold text-white mb-12 flex items-center">
+            <span class="text-terminalGreen mr-3 text-xl">04.</span> Expériences Professionnelles & Stages
+            <span class="ml-4 h-[1px] bg-borderCol flex-grow"></span>
+        </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div class="bg-cardBg border border-borderCol p-6 rounded-lg flex flex-col justify-between hover:border-terminalGreen transition-colors">
+        <div>
+            <div class="flex justify-between items-center mb-4">
+                <i class="fa-solid fa-folder-open text-terminalGreen text-2xl"></i>
+                <a href="https://github.com/khaliphaguey" target="_blank"
+                    class="text-gray-400 hover:text-terminalGreen text-lg transition-colors"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <h3 class="text-xl font-bold text-white">Développeur Web / Technicien Info - Vision BF</h3>
+            <p class="text-gray-300 font-sans mt-2 leading-relaxed">
+                Responsable du développement du site web de l'entreprise et d'un CRM interne. Gestion des systèmes informatiques, maintenance, support utilisateurs et administration des outils CRM.
+            </p>
+        </div>
+        <div>
+            <div class="font-code text-xs text-terminalCyan my-2">Oct 2025 - Juin 2026 | Casablanca, Maroc</div>
+            <div
+                class="flex flex-wrap gap-2 font-code text-xs text-terminalCyan pt-4 border-t border-borderCol mb-4">
+                <span>#WebDevelopment</span>
+                <span>#CRM</span>
+                <span>#SupportIT</span>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="bg-cardBg border border-borderCol p-6 rounded-lg flex flex-col justify-between hover:border-terminalGreen transition-colors">
+        <div>
+            <div class="flex justify-between items-center mb-4">
+                <i class="fa-solid fa-folder-open text-terminalGreen text-2xl"></i>
+                <a href="https://github.com/khaliphaguey" target="_blank"
+                    class="text-gray-400 hover:text-terminalGreen text-lg transition-colors"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <h3 class="text-xl font-bold text-white">Développeur Web - Kong Marketing</h3>
+            <p class="text-gray-300 font-sans mt-2 leading-relaxed">
+                Mise en place du site pour l'entreprise <strong class="text-white">Leads infiny</strong>. Conception de la base de données MySQL et développement de la logique back-end en PHP.
+            </p>
+        </div>
+        <div>
+            <div class="font-code text-xs text-terminalCyan my-2">Jan 2022 - Aoû 2023 | Casablanca, Maroc</div>
+            <div
+                class="flex flex-wrap gap-2 font-code text-xs text-terminalCyan pt-4 border-t border-borderCol mb-4">
+                <span>#HTML</span>
+                <span>#CSS</span>
+                <span>#Bootstrap</span>
+                <span>#PHP</span>
+                <span>#MySQL</span>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="bg-cardBg border border-borderCol p-6 rounded-lg flex flex-col justify-between hover:border-terminalGreen transition-colors">
+        <div>
+            <div class="flex justify-between items-center mb-4">
+                <i class="fa-solid fa-folder-open text-terminalGreen text-2xl"></i>
+                <a href="https://github.com/khaliphaguey" target="_blank"
+                    class="text-gray-400 hover:text-terminalGreen text-lg transition-colors"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <h3 class="text-xl font-bold text-white">Développeur Back-end - Corps Vision</h3>
+            <p class="text-gray-300 font-sans mt-2 leading-relaxed">
+                Conception et maintien de la structure de base de données avec Laravel Eloquent ORM. Implémentation de la logique back-end pour la gestion des locations, réservations et paiements.
+            </p>
+        </div>
+        <div>
+            <div class="font-code text-xs text-terminalCyan my-2">Déc 2022 - Juil 2023 | Dakar, Sénégal</div>
+            <div
+                class="flex flex-wrap gap-2 font-code text-xs text-terminalCyan pt-4 border-t border-borderCol mb-4">
+                <span>#Laravel</span>
+                <span>#PHP</span>
+                <span>#MySQL</span>
+                <span>#EloquentORM</span>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+    </section>
+
+    <footer class="py-12 border-t border-borderCol text-center font-code text-xs text-gray-500 space-y-2">
+        <p>&copy; 2026 Khalipha Gueye. All rights reserved. // Designed with terminal theme.</p>
+        <p><a href="https://github.com/khaliphagueye" target="_blank" class="text-terminalGreen hover:underline"><i
+                    class="fab fa-github mr-1"></i> github.com/khaliphagueye</a></p>
+    </footer>
+
+    <script>
+        // Menu Mobile Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fermer le menu mobile lors du clic sur un lien
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Typing Effect
+        const words = ["Développeur Web", "Technicien Informatique", "Backend Engineer"];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function () {
+                if (word.length > 0) {
+                    document.getElementById('typed-text').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return false;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function () {
+                if (word.length > 0) {
+                    word.pop();
+                    document.getElementById('typed-text').innerHTML = word.join("");
+                } else {
+                    i = (i + 1) % words.length;
+                    setTimeout(typingEffect, 500);
+                    return false;
+                }
+                timer = setTimeout(loopDeleting, 40);
+            };
+            loopDeleting();
+        }
+
+        typingEffect();
+    </script>
+</body>
+
+</html>
